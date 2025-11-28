@@ -1,0 +1,208 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>¿Quieres ser mi novia? 💜</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      background: radial-gradient(circle at top, #a855f7, #111827);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #f9fafb;
+    }
+
+    .wrapper {
+      width: 100%;
+      max-width: 420px;
+      padding: 16px;
+    }
+
+    .card {
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: 18px;
+      padding: 20px 18px 18px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      text-align: center;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      background: rgba(168, 85, 247, 0.15);
+      border: 1px solid rgba(168, 85, 247, 0.6);
+      padding: 4px 10px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+      color: #e9d5ff;
+    }
+
+    h1 {
+      font-size: 1.4rem;
+      margin-bottom: 6px;
+    }
+
+    .subtitle {
+      font-size: 0.9rem;
+      color: #cbd5f5;
+      margin-bottom: 18px;
+    }
+
+    .heart {
+      font-size: 2rem;
+      margin-bottom: 12px;
+      animation: latido 1.2s infinite;
+    }
+
+    @keyframes latido {
+      0%, 100% {
+        transform: scale(1);
+      }
+      25% {
+        transform: scale(1.1);
+      }
+      50% {
+        transform: scale(0.97);
+      }
+      75% {
+        transform: scale(1.08);
+      }
+    }
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .buttons button {
+      flex: 1;
+      padding: 10px;
+      border-radius: 999px;
+      border: none;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.15s ease, color 0.15s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .btn-si {
+      background: #a855f7;
+      color: #f9fafb;
+      box-shadow: 0 8px 18px rgba(168, 85, 247, 0.45);
+    }
+
+    .btn-si:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 24px rgba(168, 85, 247, 0.6);
+    }
+
+    .btn-no {
+      background: transparent;
+      color: #e5e7eb;
+      border: 1px solid rgba(148, 163, 184, 0.8);
+    }
+
+    .btn-no:hover {
+      transform: translateY(-1px);
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    .message {
+      min-height: 40px;
+      font-size: 0.9rem;
+      color: #e5e7eb;
+    }
+
+    .message span {
+      display: inline-block;
+      margin-top: 4px;
+    }
+
+    .footer {
+      margin-top: 6px;
+      font-size: 0.7rem;
+      color: #9ca3af;
+    }
+
+    @media (max-width: 400px) {
+      .card {
+        padding: 18px 14px 14px;
+      }
+      h1 {
+        font-size: 1.2rem;
+      }
+      .subtitle {
+        font-size: 0.85rem;
+      }
+      .buttons button {
+        font-size: 0.85rem;
+        padding: 9px 6px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="card">
+      <div class="tag">Pregunta seria (pero cute)</div>
+      <div class="heart">💜</div>
+      <h1>¿Quieres ser mi novia?</h1>
+      <p class="subtitle">
+        Prometo risas, apoyo, y robarte papas a escondidas.
+      </p>
+
+      <div class="buttons">
+        <button class="btn-si" id="btnSi">
+          <span>💫 Sí</span>
+        </button>
+        <button class="btn-no" id="btnNo">
+          <span>🙈 No</span>
+        </button>
+      </div>
+
+      <div class="message" id="message"></div>
+
+      <div class="footer">
+        Hecho con nervios, cariño y un poquito de HTML.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const btnSi = document.getElementById("btnSi");
+    const btnNo = document.getElementById("btnNo");
+    const message = document.getElementById("message");
+
+    btnSi.addEventListener("click", () => {
+      message.innerHTML = `
+        <span>✨ Excelente elección. No hay devoluciones ni reembolsos, solo abrazos ilimitados y risas garantizadas. 💜</span>
+      `;
+    });
+
+    btnNo.addEventListener("click", () => {
+      message.innerHTML = `
+        <span>😏 Respuesta incorrecta. El sistema ha detectado un error de percepción de lo increíble que podríamos ser juntos. Intenta de nuevo…</span>
+      `;
+    });
+  </script>
+</body>
+</html>
+```
